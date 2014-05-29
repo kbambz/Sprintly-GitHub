@@ -697,7 +697,7 @@ class SprintlyTool:
         self.cprint('Hook was updated at %s' % HOOK_PATH, attr=GREEN)
 
     def cprint(self, str, attr=None, trim=True):
-        self._term.write(self.render(str, attr, trim) + '\r\n')
+        self._term.write(self.render(str, attr, trim).encode('utf-8') + '\r\n')
 
     def render(self, str, attr=None, trim=True):
         if self._has_color:
