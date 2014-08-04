@@ -55,6 +55,7 @@ ITEM_COLORS = {
 }
 
 ITEM_STATUSES = {
+    'someday': "Someday",
     'backlog': "Backlog",
     'in-progress': "In Progress",
     'completed': "Completed",
