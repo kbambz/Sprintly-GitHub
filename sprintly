@@ -11,12 +11,18 @@ import subprocess
 import re
 import string
 import logging
-from curses import setupterm, tigetstr, tigetnum, tparm
+try:
+    from curses import setupterm, tigetstr, tigetnum, tparm
+except Exception as e:
+    pass
 from time import time
 from optparse import OptionParser
 
 # force utf-8 encoding
-reload(sys)
+try:
+    reload(sys)
+except:
+    pass
 sys.setdefaultencoding('utf-8')
 
 logging.basicConfig()
