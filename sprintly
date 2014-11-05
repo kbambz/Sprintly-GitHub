@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: UTF-8 -*-
 
+import imp
 import sys
 import os
 import locale
@@ -19,10 +20,7 @@ from time import time
 from optparse import OptionParser
 
 # force utf-8 encoding
-try:
-    reload(sys)
-except:
-    pass
+imp.reload(sys)
 sys.setdefaultencoding('utf-8')
 
 logging.basicConfig()
